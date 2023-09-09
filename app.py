@@ -89,7 +89,7 @@ def get_user(current_user, user_id):
 
 
 @app.route("/users/", methods=["POST"])
-def create_user(current_user):
+def create_user():
     data = request.get_json()
     if 'name' not in data or 'email' not in data or 'password' not in data:
         return jsonify({
